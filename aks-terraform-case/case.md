@@ -29,14 +29,26 @@ Tudo isso teve que ser pensado considerando que no futuro outros clusters poderi
 
 Essas decisões não foram apenas técnicas — foram baseadas em contexto organizacional, barreiras culturais e facilidade de adoção futura.
 
+## Aplicabilidade real em time técnico
+
+Apesar de ter nascido como uma PoC, a estrutura foi pensada desde o início para ser aproveitada por qualquer membro do time — sem depender da minha presença.
+
+A modularização com Terraform, a parametrização via biblioteca de variáveis e os templates YAML do pipeline foram organizados de forma que:
+
+- Um novo cluster pode ser criado com apenas alguns ajustes mínimos
+- A estrutura pode ser reutilizada em múltiplos ambientes (dev, hmg, prd) sem reescrever código
+- Toda a automação pode ser entendida por outro devops ou engenheiro de plataforma com leitura simples
+
+Essa visão ajudou o time a visualizar o valor da automação além do script — como algo que sustenta operação e escala.
+
+Mesmo não sendo levada à produção por decisões organizacionais externas, a estrutura foi elogiada pela simplicidade e replicabilidade.
+
 ## Resultado entregue
 
 - Pipeline funcional para provisionamento de clusters AKS
 - Uso de variáveis parametrizadas por ambiente
 - Estrutura modular reaproveitável
 - Documentação mínima com instruções de uso
-
-O projeto foi bem recebido pela equipe técnica, que destacou a simplicidade da solução, mas não seguiu para produção por conta de diretrizes organizacionais relacionadas à adoção da nuvem naquele momento.
 
 ## Aprendizados
 
