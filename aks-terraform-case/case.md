@@ -2,12 +2,12 @@
 
 Este case mostra como estruturei uma prova de conceito (PoC) para provisionamento automatizado de clusters AKS utilizando Terraform, Azure DevOps e GitHub — com o objetivo de demonstrar a viabilidade técnica de um pipeline completo de infraestrutura como código.
 
-O projeto foi construído a partir da replicação de um ambiente real utilizado na empresa em que eu trabalhava, e teve como foco apresentar a solução para um cliente que estava iniciando a jornada de automação e Kubernetes.
+O projeto foi inspirado em desafios reais enfrentados durante minha atuação com Azure e AKS, e estruturado como uma PoC funcional para demonstrar práticas de automação e provisionamento com foco em reusabilidade e escalabilidade.
 
 ## Objetivo
 
-Criar uma PoC realista e funcional de provisionamento de clusters AKS totalmente automatizado, usando ferramentas que o cliente já utilizava em sua stack (Azure + Azure DevOps).  
-A ideia era demonstrar que o processo podia ser seguro, simples e reaproveitável — eliminando a prática manual que o time usava até então para subir clusters na mão.
+Criar uma PoC realista e funcional de provisionamento de clusters AKS totalmente automatizado, usando ferramentas que já faziam parte do dia a dia técnico do time (Azure + Azure DevOps).  
+A ideia era demonstrar que o processo podia ser seguro, simples e reaproveitável — eliminando a prática manual comum na criação de clusters.
 
 ## Desafios técnicos
 
@@ -16,16 +16,15 @@ Durante o desenvolvimento, enfrentei alguns pontos-chave:
 - Configuração detalhada de pipelines no Azure DevOps (integração com GitHub + organização dos stages)
 - Separação e reutilização de módulos Terraform
 - Estruturação de variáveis de ambiente e parametrização segura
-- Necessidade de um backend remoto (bucket) para armazenar o terraform.tfstate
-- Padrão de nomeação para ambientes e recursos
+- Padronização de variáveis e nomenclatura para ambientes e recursos
 
 Tudo isso teve que ser pensado considerando que no futuro outros clusters poderiam ser provisionados pela mesma base.
 
 ## Decisões técnicas
 
-- AKS foi escolhido por já ser parte do stack da empresa e do cliente.
-- Terraform foi priorizado ao invés do Bicep, por já existir conhecimento interno (dois devops do cliente já utilizavam Terraform) — o que permitiria escalar a adoção com menos fricção.
-- Azure DevOps foi mantido por já ser o pipeline padrão tanto da consultoria quanto do cliente, e facilitar a integração com permissões já definidas.
+- AKS foi escolhido por já ser parte do stack usado no contexto original.
+- Terraform foi priorizado ao invés do Bicep, por já existir conhecimento interno — o que permitiria escalar a adoção com menos fricção.
+- Azure DevOps foi mantido por já ser o pipeline padrão do time, facilitando a integração com permissões já definidas.
 
 Essas decisões não foram apenas técnicas — foram baseadas em contexto organizacional, barreiras culturais e facilidade de adoção futura.
 
@@ -54,7 +53,16 @@ Mesmo não sendo levada à produção por decisões organizacionais externas, a 
 
 - Foi o primeiro projeto onde me desafiei a criar uma entrega técnica pensando também em evangelização futura
 - A estrutura criada serviu de base para outros testes e futuros projetos de automação
-- Se eu fosse refazer, daria mais atenção à forma de apresentação e à modularização dos pipelines
+
+Se eu fosse refazer hoje, com a visão que tenho agora:
+
+- Implementaria um backend remoto com controle de estado em storage externo (ex: Azure Storage Account) para preparar o pipeline para uso real em produção
+- Incluiria workspaces ou organização explícita por ambientes (`dev`, `hmg`, `prd`) já no código
+- Criaria scripts auxiliares de execução (`deploy.sh`, `destroy.sh`) para facilitar onboarding de novos membros
+- Adicionaria exemplos de rollback seguro e destruição controlada da infraestrutura
+- Enriqueceria a documentação técnica nos próprios arquivos `.tf` e nos YAMLs de pipeline, com comentários explicando as decisões
+
+Esses pontos aumentariam a clareza, a reusabilidade e a preparação da estrutura para times maiores ou múltiplos clusters simultâneos.
 
 ## Repositório com código
 
