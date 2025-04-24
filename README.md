@@ -21,8 +21,6 @@ Cada pasta contém um case estruturado com foco em:
 - [Migração Automatizada de Repositórios Bitbucket → GitHub](./bitbucket-to-github-case/case.md)  
   Script em Python que migra repositórios com histórico, branches e rastreabilidade, usando filtros e autenticação SSH.
 
-- [Outros cases em construção...]
-
 ---
 
 ## 📫 Contato
