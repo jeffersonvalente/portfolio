@@ -13,9 +13,14 @@ Cada pasta contém um case estruturado com foco em:
 
 ---
 
-## 🔍 Navegação
+## Navegação
 
-- [AKS com Terraform e Azure DevOps](./aks-terraform-case/case.md)
+- [Provisionamento de AKS com Terraform e Azure DevOps](./aks-terraform-case/case.md)  
+  Automação completa de infraestrutura Kubernetes no Azure com CI/CD, módulos reutilizáveis e pipelines configuráveis.
+
+- [Migração Automatizada de Repositórios Bitbucket → GitHub](./bitbucket-to-github-case/case.md)  
+  Script em Python que migra repositórios com histórico, branches e rastreabilidade, usando filtros e autenticação SSH.
+
 - [Outros cases em construção...]
 
 ---
