@@ -29,9 +29,9 @@ Durante o desenvolvimento, enfrentei diversos pontos críticos:
 
 ## Decisões técnicas
 
-- A linguagem escolhida foi Python, por ser a única que domino com autonomia e pela clareza que ela oferece pra manutenção futura
-- A ferramenta `gh` (GitHub CLI) foi usada para facilitar a criação de repositórios de forma segura e rastreável
-- O script foi desenhado para ser simples de executar, com leitura de configuração via `config.py`, e fácil de adaptar a novos cenários
+A linguagem escolhida foi Python pela facilidade de leitura, curva de adoção acessível e compatibilidade com ferramentas como a GitHub CLI. Além disso, garante que o script possa ser facilmente adaptado e mantido por outros membros do time, se necessário.
+
+A CLI oficial do GitHub (`gh`) foi usada para facilitar a criação automatizada de repositórios privados com autenticação segura.
 
 ## Resultado entregue
 
@@ -40,8 +40,7 @@ Durante o desenvolvimento, enfrentei diversos pontos críticos:
 - Capacidade de aplicar filtros para selecionar quais repositórios migrar
 - Migração controlada e segura, feita repositório por repositório
 
-O script foi usado de fato no processo de migração da empresa. Após sua execução, o feedback do time foi direto:  
-**"Puta merda, que bom que usamos isso."**
+O script foi validado em ambiente real, com feedback imediato da equipe: **a automação poupou tempo, evitou erros manuais e garantiu uma transição muito mais segura do que seria possível manualmente.**
 
 ## Aprendizados
 
