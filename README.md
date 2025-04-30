@@ -14,13 +14,10 @@ Tudo foi escrito com foco em clareza e contexto técnico — pra que qualquer pe
 
 ---
 
-## 🧭 Navegação
-
-### 🔹 Provisionamento de AKS com Terraform e Azure DevOps  
-Automação completa de clusters Kubernetes no Azure, com CI/CD modular, pipelines configuráveis e foco em reusabilidade por ambiente.
-
-### 🔹 Migração Automatizada de Repositórios (Bitbucket → GitHub)  
-Script em Python que migra centenas de repositórios com histórico completo, controle por filtros e segurança via SSH — criado sob urgência real e aplicado em produção.
+| Case | Descrição | Link |
+|------|-----------|------|
+| Provisionamento de AKS com Terraform e Azure DevOps | Automação completa de clusters Kubernetes no Azure, com CI/CD modular, pipelines configuráveis e foco em reusabilidade por ambiente. | [aks-terraform-case/case.md](./aks-terraform-case/case.md) |
+| Bitbucket to GitHub — Migração Orquestrada | Estratégia prática para migração de repositórios com histórico completo e pipelines preservados. | [bitbucket-to-github-case/case.md](./bitbucket-to-github-case/case.md) |
 
 ---
 
