@@ -13,7 +13,7 @@ Mais do que mostrar o código, cada case apresenta:
 Tudo foi escrito com foco em clareza e contexto técnico — pra que qualquer pessoa, de qualquer área, consiga entender como penso, decido e resolvo.
 
 ---
-## CASES
+## Docs
 
 | Case | Descrição | Link |
 |------|-----------|------|
