@@ -1,4 +1,4 @@
-# Case Técnico — Automação de Migração de Repositórios do Bitbucket para o GitHub
+# Automação de Migração de Repositórios do Bitbucket para o GitHub
 
 Este case documenta a criação de um script em Python para automatizar a migração de repositórios do Bitbucket para o GitHub — com preservação completa de histórico de commits, branches e nomes originais.
 
