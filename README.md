@@ -1,29 +1,23 @@
 # Portfólio Técnico — Jefferson Valente
 
-Este repositório reúne alguns dos meus cases técnicos mais relevantes como engenheiro de plataforma, SRE e DevOps.
+Cases de engenharia documentados com problema, decisão e impacto.
 
-Cada pasta aqui documenta uma entrega real.  
-Mais do que mostrar o código, cada case apresenta:
-
-- O problema que motivou a entrega
-- As decisões técnicas que tomei (e por quê)
-- O impacto prático gerado
-- E o link direto para o repositório correspondente
-
-Tudo foi escrito com foco em clareza e contexto técnico — pra que qualquer pessoa, de qualquer área, consiga entender como penso, decido e resolvo.
+Cada pasta tem um `case.md` com o contexto real, as escolhas técnicas e o que ficou de pé no final.
+Sem buzzword, sem resultado inventado.
 
 ---
-## Entregas
 
-| Case | Descrição | Link |
-|------|-----------|------|
-| Provisionamento de AKS com Terraform e Azure DevOps | Automação completa de clusters Kubernetes no Azure, com CI/CD modular, pipelines configuráveis e foco em reusabilidade por ambiente. | [aks-terraform-case/case.md](./aks-terraform-case/case.md) |
-| Bitbucket to GitHub — Migração Orquestrada | Estratégia prática para migração de repositórios com histórico completo e pipelines preservados. | [bitbucket-to-github-case/case.md](./bitbucket-to-github-case/case.md) |
-| Alerta Cego — Observabilidade para falhas invisíveis | Detecção de falhas silenciosas via logs `INFO`, alertas com NRQL e deploy rastreável com GitHub Actions e K8s local. | [silent-failure-detection-newrelic/case.md](./silent-failure-detection-newrelic/case.md) |
+## Cases
+
+| Case | O que resolve |
+|---|---|
+| [/one-vps-platform-case](./one-vps-platform-case/case.md) | Um VPS barato virado plataforma de engenharia privada: k3s, ArgoCD, SigNoz, isolamento por cliente, zero porta exposta |
+| [/silent-failure-detection-newrelic](./silent-failure-detection-newrelic/case.md) | O sistema parou de funcionar. O pod seguia rodando. Os logs diziam tudo OK. Como detectar o que não gera erro |
+| [/bitbucket-to-github-case](./bitbucket-to-github-case/case.md) | Migração de 270+ repositórios com histórico, branches e rastreabilidade preservados, sob prazo real |
+| [/aks-terraform-case](./aks-terraform-case/case.md) | Provisionamento de clusters AKS com Terraform e Azure DevOps: modular, reutilizável, sem intervenção manual |
+| [/deployAksTerraform-case](./deployAksTerraform-case/case.md) | IaC para AKS com módulos parametrizados por ambiente e pipeline configurável no Azure DevOps |
+| [/projeto_serverless_aws-case](./projeto_serverless_aws-case/case.md) | Arquitetura serverless na AWS com Lambda, API Gateway e RDS — provisionamento completo via Terraform |
+
 ---
 
-## 📫 Contato
-
-Quer conversar sobre automação, visibilidade técnica ou como simplificar infraestrutura sem abrir mão de rastreabilidade?
-
-[🔗 LinkedIn — Jefferson Hoy Valente](https://www.linkedin.com/in/jefferson-hoy-valente/)
+[jeffersonvalente.com.br](https://jeffersonvalente.com.br) · [linkedin.com/in/jefferson-hoy-valente-7352a0156](https://linkedin.com/in/jefferson-hoy-valente-7352a0156)
